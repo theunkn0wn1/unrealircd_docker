@@ -5,6 +5,7 @@ services:
     image: theunkn0wn1/unrealircd
     ports:
       - "6667:6667" # for IRC
+      - "6697:6697" # for IRC
 
   services:
     build: ./irc_services
