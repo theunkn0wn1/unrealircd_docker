@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+  irc:
+    build: ./irc
+    image: theunkn0wn1/unrealircd
+    ports:
+      - "6667:6667" # for IRC
+
+  services:
+    build: ./irc_services
+    image: theunkn0wn1/anope_services
+
+    links:
+      - irc
